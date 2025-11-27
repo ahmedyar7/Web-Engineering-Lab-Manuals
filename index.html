@@ -4,12 +4,20 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Web Engineering Labs</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap"
+            rel="stylesheet" />
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
+        <div class="background-grid"></div>
+
         <header>
-            <h1>Web Engineering Journal</h1>
-            <p>Practical demonstrations and experiments.</p>
+            <span class="badge">Portfolio</span>
+            <h1>Web Engineering <span class="text-gradient">Journal</span></h1>
+            <p>Practical demonstrations, experiments, and code labs.</p>
         </header>
 
         <main class="container">
@@ -17,14 +25,20 @@
                 <div
                     class="card-image"
                     style="
-                        background-image: url('https://placehold.co/600x400/1e1e1e/64ffda?text=Lab-01');
+                        background-image: url('https://placehold.co/600x400/0f172a/64ffda?text=Lab-01');
                     "></div>
                 <div class="card-content">
-                    <span>Lab 1</span>
-                    <h3>Introduction to HTML</h3>
-                    <p>Webpage regrading the Favourite Animal</p>
+                    <div class="card-header">
+                        <span class="tag">HTML5</span>
+                        <span class="lab-number">01</span>
+                    </div>
+                    <h3>Favorite Animal</h3>
+                    <p>
+                        Introduction to basic HTML structure creating a webpage
+                        regarding my favorite animal.
+                    </p>
                     <a href="./Lab-1/index.html" target="_blank" class="btn"
-                        >View Demo →</a
+                        >View Demo <span class="arrow">→</span></a
                     >
                 </div>
             </div>
@@ -33,17 +47,20 @@
                 <div
                     class="card-image"
                     style="
-                        background-image: url('https://placehold.co/600x400/1e1e1e/64ffda?text=Lab-02');
+                        background-image: url('https://placehold.co/600x400/0f172a/64ffda?text=Lab-02');
                     "></div>
                 <div class="card-content">
-                    <span>Lab 2</span>
-                    <h3>Advanced Hyper Text Markup Language</h3>
+                    <div class="card-header">
+                        <span class="tag">HTML5</span>
+                        <span class="lab-number">02</span>
+                    </div>
+                    <h3>Advanced HTML</h3>
                     <p>
-                        Making the Small and Simple Portfolio using the These
-                        advanced tags
+                        Creating a small, semantic portfolio using advanced
+                        markup tags and tables.
                     </p>
                     <a href="./Lab-2/index.html" target="_blank" class="btn"
-                        >View Demo →</a
+                        >View Demo <span class="arrow">→</span></a
                     >
                 </div>
             </div>
@@ -52,16 +69,20 @@
                 <div
                     class="card-image"
                     style="
-                        background-image: url('https://placehold.co/600x400/1e1e1e/64ffda?text=Lab-03');
+                        background-image: url('https://placehold.co/600x400/0f172a/64ffda?text=Lab-03');
                     "></div>
                 <div class="card-content">
-                    <span>Lab 3</span>
-                    <h3>Introduction to Cascading Style sheets</h3>
+                    <div class="card-header">
+                        <span class="tag">CSS3</span>
+                        <span class="lab-number">03</span>
+                    </div>
+                    <h3>Intro to CSS</h3>
                     <p>
-                        Modification on the previous Portfolio using CSS
+                        Modifying the previous portfolio structure with basic
+                        Cascading Style Sheets.
                     </p>
                     <a href="./Lab-3/index.html" target="_blank" class="btn"
-                        >View Demo →</a
+                        >View Demo <span class="arrow">→</span></a
                     >
                 </div>
             </div>
@@ -70,16 +91,20 @@
                 <div
                     class="card-image"
                     style="
-                        background-image: url('https://placehold.co/600x400/1e1e1e/64ffda?text=Lab-04');
+                        background-image: url('https://placehold.co/600x400/0f172a/64ffda?text=Lab-04');
                     "></div>
                 <div class="card-content">
-                    <span>Lab 4</span>
-                    <h3>Introduction to Box Model and Media Query</h3>
+                    <div class="card-header">
+                        <span class="tag">CSS3</span>
+                        <span class="lab-number">04</span>
+                    </div>
+                    <h3>Box Model & Layouts</h3>
                     <p>
-                        Modification on the previous Portfolio using CSS
+                        Understanding margins, padding, and responsive media
+                        queries.
                     </p>
                     <a href="./Lab-4/index.html" target="_blank" class="btn"
-                        >View Demo →</a
+                        >View Demo <span class="arrow">→</span></a
                     >
                 </div>
             </div>
@@ -88,65 +113,86 @@
                 <div
                     class="card-image"
                     style="
-                        background-image: url('https://placehold.co/600x400/1e1e1e/64ffda?text=Lab-05');
+                        background-image: url('https://placehold.co/600x400/0f172a/64ffda?text=Lab-05');
                     "></div>
                 <div class="card-content">
-                    <span>Lab 5</span>
-                    <h3>Introduction 12-Column Grid and Media Query</h3>
-                    <p>Building the Personal Portfolio</p>
-                    <a href="./Lab-5/index.html" target="_blank" class="btn"
-                        >View Demo →</a
-                    >
-                </div>
-            </div>
-
-            <div class="card">
-                <div
-                    class="card-image"
-                    style="
-                        background-image: url('https://placehold.co/600x400/1e1e1e/64ffda?text=Lab-06');
-                    "></div>
-                <div class="card-content">
-                    <span>Lab 6</span>
-                    <h3>Introduction to Bootstraps</h3>
-                    <p>Building the Personal Portfolio</p>
-                    <a href="./Lab-6/index.html" target="_blank" class="btn"
-                        >View Demo →</a
-                    >
-                </div>
-            </div>
-
-            <div class="card">
-                <div
-                    class="card-image"
-                    style="
-                        background-image: url('https://placehold.co/600x400/1e1e1e/64ffda?text=Lab-07');
-                    "></div>
-                <div class="card-content">
-                    <span>Lab 7</span>
-                    <h3>Introduction to JS</h3>
-                    <p>Building the Calculator using JS</p>
-                    <a href="./Lab-7/index.html" target="_blank" class="btn"
-                        >View Demo →</a
-                    >
-                </div>
-            </div>
-
-            <div class="card">
-                <div
-                    class="card-image"
-                    style="
-                        background-image: url('https://placehold.co/600x400/1e1e1e/64ffda?text=Lab-08');
-                    "></div>
-                <div class="card-content">
-                    <span>Lab 8</span>
-                    <h3>CRUD Operations Using JavaScript</h3>
+                    <div class="card-header">
+                        <span class="tag">Layout</span>
+                        <span class="lab-number">05</span>
+                    </div>
+                    <h3>12-Column Grid</h3>
                     <p>
-                        Exploring the Basic CRUD Operations Building the Recipe
-                        Management System
+                        Building a robust personal portfolio using a custom
+                        12-column grid system.
+                    </p>
+                    <a href="./Lab-5/index.html" target="_blank" class="btn"
+                        >View Demo <span class="arrow">→</span></a
+                    >
+                </div>
+            </div>
+
+            <div class="card">
+                <div
+                    class="card-image"
+                    style="
+                        background-image: url('https://placehold.co/600x400/0f172a/64ffda?text=Lab-06');
+                    "></div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <span class="tag">Framework</span>
+                        <span class="lab-number">06</span>
+                    </div>
+                    <h3>Bootstrap 5</h3>
+                    <p>
+                        Rapid UI development and responsiveness using the
+                        Bootstrap framework.
+                    </p>
+                    <a href="./Lab-6/index.html" target="_blank" class="btn"
+                        >View Demo <span class="arrow">→</span></a
+                    >
+                </div>
+            </div>
+
+            <div class="card">
+                <div
+                    class="card-image"
+                    style="
+                        background-image: url('https://placehold.co/600x400/0f172a/64ffda?text=Lab-07');
+                    "></div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <span class="tag">JS</span>
+                        <span class="lab-number">07</span>
+                    </div>
+                    <h3>Intro to JavaScript</h3>
+                    <p>
+                        Logic implementation: Building a functional Calculator
+                        using DOM manipulation.
+                    </p>
+                    <a href="./Lab-7/index.html" target="_blank" class="btn"
+                        >View Demo <span class="arrow">→</span></a
+                    >
+                </div>
+            </div>
+
+            <div class="card">
+                <div
+                    class="card-image"
+                    style="
+                        background-image: url('https://placehold.co/600x400/0f172a/64ffda?text=Lab-08');
+                    "></div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <span class="tag">JS / DOM</span>
+                        <span class="lab-number">08</span>
+                    </div>
+                    <h3>CRUD Operations</h3>
+                    <p>
+                        A Recipe Management System exploring Create, Read,
+                        Update, and Delete logic.
                     </p>
                     <a href="./Lab-8/index.html" target="_blank" class="btn"
-                        >View Demo →</a
+                        >View Demo <span class="arrow">→</span></a
                     >
                 </div>
             </div>
@@ -155,16 +201,20 @@
                 <div
                     class="card-image"
                     style="
-                        background-image: url('https://placehold.co/600x400/1e1e1e/64ffda?text=Lab-09');
+                        background-image: url('https://placehold.co/600x400/0f172a/64ffda?text=Lab-09');
                     "></div>
                 <div class="card-content">
-                    <span>Lab 9</span>
-                    <h3>Introduction to Application Programming interfaces</h3>
+                    <div class="card-header">
+                        <span class="tag">API</span>
+                        <span class="lab-number">09</span>
+                    </div>
+                    <h3>Fetch API</h3>
                     <p>
-                        Building a simple NEWS Website using NewsAPI
+                        Consuming third-party data to build a dynamic News
+                        Website using NewsAPI.
                     </p>
                     <a href="./Lab-9/index.html" target="_blank" class="btn"
-                        >View Demo →</a
+                        >View Demo <span class="arrow">→</span></a
                     >
                 </div>
             </div>
@@ -173,17 +223,20 @@
                 <div
                     class="card-image"
                     style="
-                        background-image: url('https://placehold.co/600x400/1e1e1e/64ffda?text=Lab-10');
+                        background-image: url('https://placehold.co/600x400/0f172a/64ffda?text=Lab-10');
                     "></div>
                 <div class="card-content">
-                    <span>Lab 10</span>
-                    <h3>Advanced JavaScript (ES6+ Features)</h3>
+                    <div class="card-header">
+                        <span class="tag">ES6+</span>
+                        <span class="lab-number">10</span>
+                    </div>
+                    <h3>Modern JavaScript</h3>
                     <p>
-                        Performing the serveral tasks to get a good hold for the
-                        ES6 module
+                        Exploring Modules, Arrow Functions, and advanced ES6+
+                        syntax features.
                     </p>
                     <a href="./Lab-10/index.html" target="_blank" class="btn"
-                        >View Demo →</a
+                        >View Demo <span class="arrow">→</span></a
                     >
                 </div>
             </div>
@@ -192,33 +245,42 @@
                 <div
                     class="card-image"
                     style="
-                        background-image: url('https://placehold.co/600x400/1e1e1e/64ffda?text=Lab-11');
+                        background-image: url('https://placehold.co/600x400/0f172a/64ffda?text=Lab-11');
                     "></div>
                 <div class="card-content">
-                    <span>Lab 11</span>
-                    <h3>Asynchronous JavaScript II</h3>
-                    <p>Profile Generator using Asynchronous JavaScript</p>
-                    <a href="./Lab-11/index.html" target="_blank" class="btn"
-                        >View Demo →</a
-                    >
-                </div>
-            </div>
-
-            <div class="card">
-                <div
-                    class="card-image"
-                    style="
-                        background-image: url('https://placehold.co/600x400/1e1e1e/64ffda?text=Lab-12');
-                    "></div>
-                <div class="card-content">
-                    <span>Lab 12</span>
-                    <h3>Dynamic Data Visualization</h3>
+                    <div class="card-header">
+                        <span class="tag">Async</span>
+                        <span class="lab-number">11</span>
+                    </div>
+                    <h3>Async/Await</h3>
                     <p>
-                        Dynamic Data Visualization - Building a Financial
-                        Tracker using Cartjs CDN
+                        Profile Generator utilizing asynchronous JavaScript
+                        handling.
+                    </p>
+                    <a href="./Lab-11/index.html" target="_blank" class="btn"
+                        >View Demo <span class="arrow">→</span></a
+                    >
+                </div>
+            </div>
+
+            <div class="card">
+                <div
+                    class="card-image"
+                    style="
+                        background-image: url('https://placehold.co/600x400/0f172a/64ffda?text=Lab-12');
+                    "></div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <span class="tag">Libs</span>
+                        <span class="lab-number">12</span>
+                    </div>
+                    <h3>Data Visualization</h3>
+                    <p>
+                        Building a Financial Tracker with dynamic charts using
+                        the Chart.js CDN.
                     </p>
                     <a href="./Lab-12/index.html" target="_blank" class="btn"
-                        >View Demo →</a
+                        >View Demo <span class="arrow">→</span></a
                     >
                 </div>
             </div>
@@ -227,24 +289,27 @@
                 <div
                     class="card-image"
                     style="
-                        background-image: url('https://placehold.co/600x400/1e1e1e/64ffda?text=Lab-13');
+                        background-image: url('https://placehold.co/600x400/0f172a/64ffda?text=Lab-13');
                     "></div>
                 <div class="card-content">
-                    <span>Lab 13</span>
-                    <h3>Interactive UI Development</h3>
-                    <p>
-                        The Multi-Step Form Wizard Making a multi page login
-                        page
-                    </p>
+                    <div class="card-header">
+                        <span class="tag">UI/UX</span>
+                        <span class="lab-number">13</span>
+                    </div>
+                    <h3>Interactive UI</h3>
+                    <p>A multi-step form wizard and multi-page login system.</p>
                     <a href="./Lab-13/index.html" target="_blank" class="btn"
-                        >View Demo →</a
+                        >View Demo <span class="arrow">→</span></a
                     >
                 </div>
             </div>
         </main>
 
         <footer>
-            <p>© 2023 Web Engineering Portfolio</p>
+            <p>
+                © 2025 Web Engineering Portfolio. Built with
+                <span style="color: var(--accent)">♥</span> and Code.
+            </p>
         </footer>
     </body>
 </html>
