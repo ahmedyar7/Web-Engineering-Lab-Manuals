@@ -1,0 +1,84 @@
+/* Ahmed Yar 480756 */
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #1a202c; /* Dark background for the page */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+/* Custom styles for the calculator buttons and layout */
+/* Ahmed Yar 480756 */
+.calculator-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+.calc-button {
+  padding: 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.1s, transform 0.1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2),
+    0 2px 4px -2px rgba(0, 0, 0, 0.08);
+}
+.calc-button:hover {
+  transform: translateY(-1px);
+}
+.calc-button:active {
+  transform: translateY(0);
+}
+/* Color variations */
+/* Ahmed Yar 480756 */
+.btn-number {
+  background-color: #2d3748;
+  color: #e2e8f0;
+}
+.btn-number:hover {
+  background-color: #4a5568;
+}
+.btn-operator {
+  background-color: #ff9f0a;
+  color: #1a202c;
+}
+.btn-operator:hover {
+  background-color: #ffb74d;
+}
+.btn-clear {
+  background-color: #a0aec0;
+  color: #1a202c;
+}
+.btn-clear:hover {
+  background-color: #cbd5e0;
+}
+.btn-equals {
+  background-color: #007bff;
+  color: #fff;
+}
+.btn-equals:hover {
+  background-color: #0066cc;
+}
+
+/* Conversion mode styling */
+/* Ahmed Yar 480756 */
+.conversion-view {
+  background-color: #2d3748;
+  padding: 16px;
+  border-radius: 12px;
+  color: #e2e8f0;
+  margin-top: 16px;
+}
+@media (max-width: 640px) {
+  .calculator-container {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+/* Ahmed Yar 480756 */

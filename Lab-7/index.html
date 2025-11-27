@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Web Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font family -->
+    <!-- Ahmed Yar 480756 -->
+  </head>
+  <body class="selection:bg-yellow-300 selection:text-gray-900">
+    <!-- Ahmed Yar 480756 -->
+    <div
+      id="calculator-app"
+      class="calculator-container w-full max-w-lg bg-gray-800 rounded-2xl shadow-2xl p-6 transition-all duration-300">
+      <!-- Header and Navigation Menu -->
+      <!-- Ahmed Yar 480756 -->
+      <div class="flex justify-between items-center mb-4 relative">
+        <h1 id="mode-title" class="text-3xl font-extrabold text-white">
+          Basic Mode
+        </h1>
+
+        <!-- Menu Button (...) -->
+        <button
+          id="menu-button"
+          class="text-white text-3xl p-2 rounded-full hover:bg-gray-700 transition-colors focus:outline-none"
+          aria-label="More options">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
+          </svg>
+        </button>
+
+        <!-- Sub Menu Popover -->
+        <div
+          id="sub-menu"
+          class="absolute right-0 top-12 w-64 bg-gray-700 rounded-xl shadow-xl z-10 transition-opacity duration-300 opacity-0 pointer-events-none">
+          <ul class="p-2 space-y-1 text-base text-gray-200">
+            <li>
+              <button
+                onclick="setMode('basic')"
+                class="w-full text-left p-3 rounded-lg hover:bg-gray-600 transition-colors">
+                Basic Calculator
+              </button>
+            </li>
+            <li>
+              <button
+                onclick="setMode('scientific')"
+                class="w-full text-left p-3 rounded-lg hover:bg-gray-600 transition-colors">
+                Scientific Mode
+              </button>
+            </li>
+            <li>
+              <button
+                onclick="setMode('unit')"
+                class="w-full text-left p-3 rounded-lg hover:bg-gray-600 transition-colors">
+                Unit Conversion (e.g., Temp)
+              </button>
+            </li>
+            <li>
+              <button
+                onclick="setMode('currency')"
+                class="w-full text-left p-3 rounded-lg hover:bg-gray-600 transition-colors">
+                Currency Conversion
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Display Area -->
+      <!-- Ahmed Yar 480756 -->
+      <div class="bg-gray-900 rounded-xl p-5 mb-4 shadow-inner">
+        <div
+          id="display-history"
+          class="text-right text-gray-400 text-sm h-6 overflow-hidden"></div>
+        <div
+          id="display-output"
+          class="text-right text-white text-5xl font-light h-16 break-all">
+          0
+        </div>
+      </div>
+
+      <!-- Main Content Area (Mode Dependent) -->
+      <!-- Ahmed Yar 480756 -->
+      <div id="main-content">
+        <!-- Calculator grid will be rendered here -->
+      </div>
+
+      <!-- Conversion Status/Error Box -->
+      <div
+        id="conversion-status"
+        class="hidden conversion-view my-4 p-4 text-sm font-medium border border-blue-500 bg-blue-900 text-blue-200">
+        <!-- Status messages appear here -->
+      </div>
+
+      <!-- Custom Modal for Alerts (replacing alert()) -->
+      <div
+        id="custom-modal"
+        class="fixed inset-0 bg-black bg-opacity-75 hidden flex items-center justify-center z-50 transition-opacity duration-300">
+        <div class="bg-gray-700 p-6 rounded-xl shadow-2xl w-80 text-center">
+          <h3 class="text-xl font-bold text-white mb-3" id="modal-title"></h3>
+          <p class="text-gray-300 mb-6" id="modal-message"></p>
+          <button
+            onclick="closeModal()"
+            class="btn-equals calc-button px-4 py-2 text-lg font-semibold w-full">
+            OK
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./script.js"></script>
+    <!-- Ahmed Yar 480756 -->
+  </body>
+</html>
