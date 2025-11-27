@@ -1,0 +1,135 @@
+/* --- CSS Variables for Dark Theme --- */
+:root {
+    --bg-main: #0a0a0a; /* Almost black background */
+    --bg-card: #141414; /* Slightly lighter card bg */
+    --text-primary: #ffffff; /* Pure white text */
+    --text-secondary: #a0a0a0; /* Muted gray text */
+    --accent: #64ffda; /* A neon teal/cyan for pop */
+    --border-color: #262626; /* Subtle borders */
+}
+
+/* --- General Reset & Typography --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    /* Using sleek system UI fonts for minimalism */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* --- Header --- */
+header {
+    text-align: center;
+    padding: 5rem 1rem 3rem; /* Ample whitespace */
+}
+
+header h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    letter-spacing: -1px;
+}
+
+header p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+}
+
+/* --- Grid Layout --- */
+.container {
+    display: grid;
+    /* Auto-responsive columns */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1100px;
+    margin: 0 auto; /* Center the grid */
+}
+
+/* --- Minimal Dark Cards --- */
+.card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px; /* Modern rounded corners */
+    overflow: hidden;
+    transition: all 0.3s ease; /* Smooth hover animation */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Card Hover Effects */
+.card:hover {
+    transform: translateY(-5px); /* Subtle lift */
+    border-color: var(--accent); /* Accent color border on hover */
+    /* A soft, colored glow behind the card */
+    box-shadow: 0 10px 20px -10px rgba(100, 255, 218, 0.2);
+}
+
+/* The Image Area (using background-image for easier sizing) */
+.card-image {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Card Text Content */
+.card-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Little "Lab XX" label */
+.card-content span {
+    color: var(--accent);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.card-content h3 {
+    margin: 0.5rem 0;
+    font-size: 1.25rem;
+}
+
+.card-content p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    flex-grow: 1; /* Pushes button to bottom */
+}
+
+/* --- Minimalist Button --- */
+.btn {
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.2s;
+    /* Push button to bottom of card */
+    margin-top: auto;
+}
+
+.btn:hover {
+    color: var(--accent);
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}

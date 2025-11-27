@@ -1,0 +1,37 @@
+body {
+    background-color: #f3f3f3;
+    font-family: Arial, sans-serif;
+    padding: 40px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Name: Ahmed Yar
+CMS-ID: 480756
+Course: Web Engineering */
+
+
+.main-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+.status-box {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.chart-container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 600px;
+    max-width: 95%;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}

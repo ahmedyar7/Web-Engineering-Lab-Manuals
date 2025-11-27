@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <!-- Name: Ahmed Yar
+        CMS-ID: 480756
+        Course: Web-Engineering 
+         -->
+
+        <meta charset="UTF-8" />
+        <title>Dependent User Profile Generator</title>
+
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body class="page-body">
+        <h1 class="main-title">Dependent User Profile Generator</h1>
+
+        <button onclick="loadUserProfile()" class="load-btn">
+            Load User Profile
+        </button>
+
+        <div id="status" class="status-box"></div>
+
+        <div class="profile-box">
+            <div>
+                <h2 class="label">Name:</h2>
+                <p id="user-name" class="value"></p>
+            </div>
+
+            <div>
+                <h2 class="label">Email:</h2>
+                <p id="user-email" class="value"></p>
+            </div>
+
+            <div>
+                <h2 class="label">Custom Bio:</h2>
+                <p id="user-bio" class="value"></p>
+            </div>
+        </div>
+
+        <script src="./script.js"></script>
+    </body>
+</html>

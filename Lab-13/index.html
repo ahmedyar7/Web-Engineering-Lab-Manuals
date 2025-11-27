@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Application Wizard</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="progress">
+                <div id="indicator-1" class="indicator active">1</div>
+                <div id="indicator-2" class="indicator">2</div>
+                <div id="indicator-3" class="indicator">3</div>
+            </div>
+
+            <div id="step-1" class="step">
+                <h2>Step 1: Personal Info</h2>
+
+                <!-- Name: Ahmed Yar
+                CMS-ID: 480756
+                Course: Web Engineering -->
+
+                <label>Name</label>
+                <input id="name" type="text" />
+                <p id="error-name" class="error"></p>
+
+                <label>Email</label>
+                <input id="email" type="email" />
+                <p id="error-email" class="error"></p>
+
+                <button id="next-1" class="btn next">Next</button>
+            </div>
+
+            <div id="step-2" class="step hidden">
+                <h2>Step 2: Account Details</h2>
+
+                <label>Username</label>
+                <input id="username" type="text" />
+                <p id="error-username" class="error"></p>
+
+                <label>Password</label>
+                <input id="password" type="password" />
+                <p id="error-password" class="error"></p>
+
+                <div class="row">
+                    <button id="prev-2" class="btn prev">Previous</button>
+                    <button id="next-2" class="btn next">Next</button>
+                </div>
+            </div>
+<!-- 
+                            Name: Ahmed Yar
+                CMS-ID: 480756
+                Course: Web Engineering -->
+
+            <div id="step-3" class="step hidden">
+                <h2>Step 3: Review & Submit</h2>
+
+                <p><strong>Name:</strong> <span id="review-name"></span></p>
+                <p><strong>Email:</strong> <span id="review-email"></span></p>
+                <p>
+                    <strong>Username:</strong>
+                    <span id="review-username"></span>
+                </p>
+
+                <div class="row">
+                    <button id="prev-3" class="btn prev">Previous</button>
+                    <button id="submit" class="btn submit">Submit</button>
+                </div>
+            </div>
+
+            <div id="success-message" class="hidden success"></div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

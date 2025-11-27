@@ -1,0 +1,102 @@
+body {
+    background: #f0f0f0;
+    font-family: Arial;
+    padding: 40px;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    max-width: 450px;
+    margin: auto;
+    border-radius: 8px;
+}
+
+                /* Name: Ahmed Yar
+                CMS-ID: 480756
+                Course: Web Engineering */
+
+.progress {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.indicator {
+    width: 40px;
+    height: 40px;
+    background: #ccc;
+    color: #555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.indicator.active {
+    background: #007bff;
+    color: white;
+}
+
+.step {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    height: 16px;
+}
+
+                /* Name: Ahmed Yar
+                CMS-ID: 480756
+                Course: Web Engineering */
+
+.btn {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.next {
+    background: #007bff;
+    color: white;
+}
+
+.prev {
+    background: #555;
+    color: white;
+}
+
+.submit {
+    background: green;
+    color: white;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.success {
+    background: #d4ffd4;
+    color: #0a5f0a;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 4px;
+}
