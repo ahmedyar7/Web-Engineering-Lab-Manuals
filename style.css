@@ -1,11 +1,11 @@
 /* --- CSS Variables for Dark Theme --- */
 :root {
-    --bg-main: #0a0a0a; /* Almost black background */
-    --bg-card: #141414; /* Slightly lighter card bg */
-    --text-primary: #ffffff; /* Pure white text */
-    --text-secondary: #a0a0a0; /* Muted gray text */
-    --accent: #64ffda; /* A neon teal/cyan for pop */
-    --border-color: #262626; /* Subtle borders */
+    --bg-main: #0a0a0a;
+    --bg-card: #141414;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    --accent: #52a1c5ff; /* Cyan/Blue */
+    --border-color: #262626;
 }
 
 /* --- General Reset & Typography --- */
@@ -18,7 +18,6 @@
 body {
     background-color: var(--bg-main);
     color: var(--text-primary);
-    /* Using sleek system UI fonts for minimalism */
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
         Helvetica, Arial, sans-serif;
     line-height: 1.6;
@@ -27,52 +26,59 @@ body {
 /* --- Header --- */
 header {
     text-align: center;
-    padding: 5rem 1rem 3rem; /* Ample whitespace */
+    padding: 5rem 1rem 3rem;
 }
 
 header h1 {
     font-weight: 700;
     font-size: 2.5rem;
     letter-spacing: -1px;
+    margin-bottom: 1rem;
 }
 
-header p {
-    color: var(--text-secondary);
-    font-size: 1.1rem;
-    margin-top: 0.5rem;
+.back-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid var(--accent);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: rgba(41, 182, 246, 0.1);
 }
 
 /* --- Grid Layout --- */
 .container {
     display: grid;
-    /* Auto-responsive columns */
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
     padding: 2rem;
     max-width: 1100px;
-    margin: 0 auto; /* Center the grid */
+    margin: 0 auto;
 }
 
 /* --- Minimal Dark Cards --- */
 .card {
     background-color: var(--bg-card);
     border: 1px solid var(--border-color);
-    border-radius: 12px; /* Modern rounded corners */
+    border-radius: 12px;
     overflow: hidden;
-    transition: all 0.3s ease; /* Smooth hover animation */
+    transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
 }
 
-/* Card Hover Effects */
 .card:hover {
-    transform: translateY(-5px); /* Subtle lift */
-    border-color: var(--accent); /* Accent color border on hover */
-    /* A soft, colored glow behind the card */
-    box-shadow: 0 10px 20px -10px rgba(100, 255, 218, 0.2);
+    transform: translateY(-5px);
+    border-color: var(--accent);
+    box-shadow: 0 10px 20px -10px rgba(41, 182, 246, 0.2);
 }
 
-/* The Image Area (using background-image for easier sizing) */
 .card-image {
     height: 180px;
     background-size: cover;
@@ -80,53 +86,79 @@ header p {
     border-bottom: 1px solid var(--border-color);
 }
 
-/* Card Text Content */
 .card-content {
     padding: 1.5rem;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    align-items: flex-start; /* Aligns button to the left */
 }
 
-/* Little "Lab XX" label */
 .card-content span {
     color: var(--accent);
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 600;
+    margin-bottom: 0.5rem;
 }
 
 .card-content h3 {
-    margin: 0.5rem 0;
+    margin: 0;
     font-size: 1.25rem;
-}
-
-.card-content p {
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-    margin-bottom: 1.5rem;
-    flex-grow: 1; /* Pushes button to bottom */
-}
-
-/* --- Minimalist Button --- */
-.btn {
-    text-decoration: none;
     color: var(--text-primary);
-    font-weight: 600;
+}
+
+.card-content .author {
+    color: var(--text-secondary);
     font-size: 0.9rem;
-    display: inline-flex;
-    align-items: center;
-    transition: color 0.2s;
-    /* Push button to bottom of card */
-    margin-top: auto;
+    font-style: italic;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.card-content .quote {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 6px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-family: monospace;
+    margin-bottom: 1.5rem;
+    /* Ensure the quote stretches full width even though parent is flex-start */
+    align-self: stretch; 
+    border-left: 2px solid var(--accent);
+}
+
+/* --- Small Compact Button --- */
+.btn {
+    display: inline-block; /* Fits text size, not full width */
+    width: auto;
+    text-decoration: none;
+    
+    /* Solid Blue Background */
+    background-color: var(--accent);
+    color: var(--bg-main);
+    
+    /* Smaller sizing */
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.85rem; /* Slightly smaller text */
+    letter-spacing: 0.5px;
+    
+    margin-top: auto; /* Pushes button to bottom */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: 2px solid var(--accent);
 }
 
 .btn:hover {
+    background-color: transparent;
     color: var(--accent);
+    transform: translateY(-2px);
+    cursor: pointer;
 }
 
-/* --- Footer --- */
 footer {
     text-align: center;
     padding: 4rem 2rem;
