@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe Management System</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>My Recipe Book</h1>
+    </header>
+
+    <main>
+      <section class="form-container">
+        <form id="add-recipe-form">
+          <input type="hidden" id="edit-index" value="" />
+
+          <h2 id="form-title">Add a New Recipe</h2>
+
+          <div class="form-group">
+            <label for="recipe-title">Title:</label>
+            <input type="text" id="recipe-title" required />
+          </div>
+
+          <div class="form-group">
+            <label for="recipe-ingredients">Ingredients:</label>
+            <textarea
+              id="recipe-ingredients"
+              rows="5"
+              required
+              placeholder="e.g., 1 cup flour\n2 eggs\n1 tsp vanilla"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="recipe-instructions">Instructions:</label>
+            <textarea id="recipe-instructions" rows="8" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="recipe-image">Image:</label>
+            <input type="file" id="recipe-image" accept="image/*" />
+            <small>Current image:</small>
+            <img
+              id="current-image-preview"
+              src=""
+              alt="Current recipe image"
+              <!--
+              Ahmed
+              Yar
+              480756
+              -- />
+            style="display: none; max-width: 100px; margin-top: 5px" />
+          </div>
+
+          <div class="form-buttons">
+            <button type="submit" id="submit-button">Add Recipe</button>
+            <button type="button" id="cancel-edit-button" style="display: none">
+              Cancel Edit
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section class="recipe-list-container">
+        <h2>My Recipes</h2>
+        <div id="recipe-list"></div>
+      </section>
+    </main>
+
+    <div id="recipe-modal" class="modal" style="display: none">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2 id="modal-title"></h2>
+        <img id="modal-image" src="" alt="Recipe Image" />
+        <h3>Ingredients</h3>
+        <p id="modal-ingredients"></p>
+        <h3>Instructions</h3>
+        <p id="modal-instructions"></p>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+
+    <footer>
+      <p>
+        &copy; 2025 Ahmed Yar |
+        <a
+          href="https://github.com/ahmedyar7"
+          target="_blank"
+          rel="noopener noreferrer"
+          >GitHub: @ahmedyar7</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>
